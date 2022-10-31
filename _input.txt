@@ -1,0 +1,7 @@
+Phase	Responses	IntentName	TrainingPhrases	InputContexts	OutputContexts	Parameters	ParentFollowupIntentName	EndInteraction
+Primary	Hello! I'm here to answer any questions about any career inquires about me. To start ask me: "What are your career goals?" or "What is your proudest achievement?"	Help	"What do you do
+What am I supposed to say
+What are you
+What is your purpose
+Help
+Testing"					FALSE
