@@ -12,11 +12,6 @@ admin.initializeApp(functions.config().firebase);
 const db = admin.firestore();
 
 const responses = {
-  Greeting: {
-    Responses: [
-      "Hello! I'm here to answer any questions about any career inquires about me. To start, ask me: ",
-    ],
-  },
   Name: { Responses: ["My name is Josh Gao"] },
   HowAreYou: {
     Responses: [
@@ -77,6 +72,11 @@ const responses = {
       "During my undergrad, I took leadership by founding my own charity acappella club. We ran our own concerts and was able to make charitable contributions to UNICEF, Yemen Relief Fund, Save the Children, and various homeless shelters. ",
     ],
   },
+  TechnicallSkills: {
+    Responses: [
+      "I can code in Python, JavaScript, Java, C++, HTML, CSS and SQL. If you would like the extended list, please check out my resume!",
+    ],
+  },
   InterviewFavoriteProject: {
     Responses: [
       "My favorite technical project is creating an algorithm that produces an estimate of house value based on features like square footage, lot size, school ratings and more.",
@@ -121,7 +121,7 @@ const responses = {
   },
   Help: {
     Responses: [
-      `Hello! I'm here to answer any questions about any career inquires about me. To start, ask me: "What are your career goals?" or "What is your proudest achievement?"`,
+      "Hello! I'm here to answer any questions about any career inquires about me. To start ask me: ",
     ],
   },
 };
@@ -196,6 +196,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest(
     intentMap.set("InterviewFutureGoals", genericIntentHandler);
     intentMap.set("InterviewDealingWithFailure", genericIntentHandler);
     intentMap.set("InterviewLeadershipAndInitiative", genericIntentHandler);
+    intentMap.set("TechnicallSkills", genericIntentHandler);
     intentMap.set("InterviewFavoriteProject", genericIntentHandler);
     intentMap.set("InterviewPrioritize", genericIntentHandler);
     intentMap.set("InterviewUnderPressure", genericIntentHandler);
